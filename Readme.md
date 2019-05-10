@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Victoria Gurevich](https://up.htmlacademy.ru/htmlcss/25/user/1039077).
-* Наставник: `Андрей Чепулис`.
+* Наставник: [Андрей Чепулис](https://up.htmlacademy.ru/htmlcss/25/user/240237)
 
 ---
 
