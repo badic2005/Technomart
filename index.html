@@ -64,16 +64,43 @@
           <a class="btn" href="#">Подробнее о компании</a>
         </p>
       </div>
-      <div class="contacts">
+      <p class="contacts">
         <h2>Контакты</h2>
         <p class="company-info-text">
           Вы можете забрать товар сами,
           заехав в наш офис:
         </p>
-        <!--        карта-->
+        <p class="contacts-map">
+          <button class="button-close" type="button">Закрыть</button>
+          <img src="img/map.jpg" width="940" height="446" 
+          alt="Офис магазина по адресу Большая Конюшенная ул., 19">
+        </p>
         <p>
           <a class="btn" href="#">Заблудились? Напишите нам</a>
         </p>
+        <form class="connection-form" action="" method="post">
+          <button class="button-close" type="button">Закрыть</button>
+          <div class="container">
+            <p class="connection-contacts">
+              <label>Ваше имя
+                <input type="text" name="name" value="" placeholder="Имя Фамилия">
+              </label>  
+              <label>Ваше e-mail
+                <input type="text" name="email" value="" placeholder="email@example.com">
+              </label>  
+            </p>
+            <p class="connection-text">
+              <label>Текст письма:
+                <textarea name="text" placeholder="В свободной форме"></textarea>
+              </label>
+            </p>
+          </div>
+          <div class="connection-footer">
+            <div class="container">
+              <button class="button" type="submit">Отправить</button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
   </main>

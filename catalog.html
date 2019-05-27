@@ -72,10 +72,66 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
+        <form class="filter" action="" method="post">
+          <hr>
+          <h3>Производители</h3>
+          <ul>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" class="filter-input" 
+                name="Bosch" checked>
+                Bosch
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" class="filter-input" 
+                name="Интерскол">
+                Интерскол
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" class="filter-input" 
+                name="Makita" checked>
+                Makita
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" class="filter-input" name="Dewalt">
+                Dewalt
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input type="checkbox" class="filter-input" name="Hitachi">
+                Hitachi
+              </label>
+            </li>
+          </ul>
+          <hr>
+          <h3>Питание:</h3>
+          <ul>
+              <li class="filter-option">
+                  <label>
+                    <input type="radio" class="filter-input" name="type-battery">
+                    Аккумуляторные
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input type="radio" class="filter-input" name="type-battery">
+                    Сетевые
+                  </label>
+                </li>
+          </ul>
+          <button type="submit" class="filter-button">Показать</button>
+        </form>
       </section>
 
       <section class="catalog">
+        <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
             <h3><a href="catalog-item-link">Перфоратор BOSCH BFG 3000</a></h3>
@@ -194,6 +250,16 @@
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-next"><a href="#">Следующая</a></li>
         </ul>
+        <form class="bucket-add-form" action="" method="post">
+            <button class="button-close" type="button">Закрыть</button>
+            <p class="icon-success container">Товар добавлен в корзину!</p>
+            <div class="bucket-add-footer">
+              <div class="container">
+                <button class="button-order" type="submit">Оформить заказ</button>
+                <button class="button" type="button">Продолжить покупки</button>
+              </div>
+            </div>
+          </form>
       </section>
     </div>
 
