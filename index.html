@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -42,7 +43,6 @@
       </nav>
     </div>
   </header>
-
   <main>
     <section class="company-info container">
       <div class="company-info-description">
@@ -71,40 +71,15 @@
           заехав в наш офис:
         </p>
         <p class="contacts-map">
-          <button class="button-close" type="button">Закрыть</button>
-          <img src="img/map.jpg" width="940" height="446" 
-          alt="Офис магазина по адресу Большая Конюшенная ул., 19">
+          <button class="button-close" type="button"><span class="vissually-hidden">Закрыть</span></button>
+          <img src="img/map.jpg" width="940" height="446" alt="Офис магазина по адресу Большая Конюшенная ул., 19">
         </p>
         <p>
           <a class="btn" href="#">Заблудились? Напишите нам</a>
         </p>
-        <form class="connection-form" action="" method="post">
-          <button class="button-close" type="button">Закрыть</button>
-          <div class="container">
-            <p class="connection-contacts">
-              <label>Ваше имя
-                <input type="text" name="name" value="" placeholder="Имя Фамилия">
-              </label>  
-              <label>Ваше e-mail
-                <input type="text" name="email" value="" placeholder="email@example.com">
-              </label>  
-            </p>
-            <p class="connection-text">
-              <label>Текст письма:
-                <textarea name="text" placeholder="В свободной форме"></textarea>
-              </label>
-            </p>
-          </div>
-          <div class="connection-footer">
-            <div class="container">
-              <button class="button" type="submit">Отправить</button>
-            </div>
-          </div>
-        </form>
-      </div>
+        </div>
     </section>
   </main>
-
   <footer class="main-footer">
     <div class="main-footer-top container">
       <a class="main-footer-logo">
@@ -136,9 +111,9 @@
         </p>
         <div class="footer-social">
           <ul>
-            <li><a class="social-button" href="#">Вконтакте</a></li>
-            <li><a class="social-button" href="#">Фейсбук</a></li>
-            <li><a class="social-button" href="#">Инстаграм</a></li>
+            <li><a class="social-button" href="#"><span class="vissually-hidden">Вконтакте</span></a></li>
+            <li><a class="social-button" href="#"><span class="vissually-hidden">Фейсбук</span></a></li>
+            <li><a class="social-button" href="#"><span class="vissually-hidden">Инстаграм</span></a></li>
           </ul>
         </div>
         <p class="footer-feedback">
@@ -152,6 +127,29 @@
       </div>
     </div>
   </footer>
+  <div class="write-us">
+    <form class="write-us-form" action="#" method="post">
+      <button class="button-close" type="button"><span class="vissually-hidden">Закрыть</span></button>
+      <div class="write-us-content">
+        <p class="write-us-contacts">
+          <label>Ваше имя
+            <input type="text" name="name" placeholder="Имя Фамилия">
+          </label>
+          <label>Ваше e-mail
+            <input type="text" name="email" placeholder="email@example.com">
+          </label>
+        </p>
+        <p class="write-us-text">
+          <label>Текст письма:
+            <textarea name="text" placeholder="В свободной форме"></textarea>
+          </label>
+        </p>
+      </div>
+      <div class="write-us-footer">
+        <button class="button" type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
