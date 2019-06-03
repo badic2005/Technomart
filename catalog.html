@@ -4,9 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&display=swap&subset=cyrillic"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="inner-page">
   <header class="main-header">
     <div class="main-header-top">
       <div class="container">
@@ -38,11 +42,11 @@
         <li class="registration-link"><a href="#">Регистрация</a></li>
       </ul>
       <div class="header-user-info">
-        <div>
+        <div class="header-user-name">
           <a href="#" class="exit-link">Равшан Джамшутович</a>
         </div>
         <a href="#" class="orders-link">Мои заказы</a>
-        <a href="#" class="privet-area-link">]Личный кабинет</a>
+        <a href="#" class="privet-area-link">Личный кабинет</a>
       </div>
       <nav class="main-navigation">
         <ul class="main-navigation-list">
@@ -67,7 +71,9 @@
         <li><a href="#">Инструмент</a></li>
         <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
-      <h2>Перфораторы</h2>
+      <div class="catalog-title">
+        <h2>Перфораторы</h2>
+      </div>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter" action="http://echo.htmlacademy.ru" method="get">
@@ -126,12 +132,14 @@
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <h3><a href="catalog-item-link">Перфоратор BOSCH BFG 3000</a></h3>
+            <h3 class="catalog-item-title"><a href="catalog-item-link">Перфоратор BOSCH BFG 3000</a></h3>
             <div class="catalog-item-img">
               <img src="img/item-1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000" />
             </div>
             <p class="catalog-item-old-price">22500 Р.</p>
-            <p class="catalog-item-price">15500 Р.</p>
+            <div class="catalog-item-price">
+              <p>15500 Р.</p>
+            </div>
             <div class="catalog-item-actions">
               <button class="btn btn-action-buy">Купить</button>
               <button class="btn btn-action-bookmark">В закладки</button>
@@ -145,8 +153,8 @@
             <p class="catalog-item-old-price">30500 Р.</p>
             <p class="catalog-item-price">25500 Р.</p>
             <div class="catalog-item-actions">
-              <button class="btn btn-action-buy">Купить</button>
-              <button class="btn btn-action-bookmark">В закладки</button>
+              <button class="btn-action-buy">Купить</button>
+              <button class="btn-action-bookmark">В закладки</button>
             </div>
           </li>
           <li class="catalog-item new">
