@@ -12,21 +12,21 @@ body {
   background-repeat: no-repeat;
 }
 
-body > * {
-  background-color: rgba(255, 0, 0, 0.3);
-}
+/*body > * {*/
+/*  background-color: rgba(255, 0, 0, 0.3);*/
+/*}*/
 
-body > * > * {
-  background-color: rgba(255, 255, 0, 0.3);
-}
+/*body > * > * {*/
+/*  background-color: rgba(255, 255, 0, 0.3);*/
+/*}*/
 
-body > * > * > * {
-  background-color: rgba(0, 0, 255, 0.3);
-}
+/*body > * > * > * {*/
+/*  background-color: rgba(0, 0, 255, 0.3);*/
+/*}*/
 
-body > * > * > * > * {
-  background-color: rgba(0, 255, 255, 0.3);
-}
+/*body > * > * > * > * {*/
+/*  background-color: rgba(0, 255, 255, 0.3);*/
+/*}*/
 
 a {
   text-decoration: none;
@@ -160,18 +160,23 @@ a {
   margin-bottom: 43px;
 }
 
-.main-header-title {
+.main-header-bottom .main-header-title {
   color: #ee3643;
   font-size: 16px;
   line-height: 23px;
   font-weight: normal;
   width: 196px;
   margin-right: 70px;
-  padding-left: 53px;
+  margin-left: 53px;
+  padding: 0;
 }
 
 .header-contacts {
   margin-right: 69px;
+}
+
+.inner-page .header-contacts {
+  margin-right: 51px;
 }
 
 .header-contacts .header-contacts-phone {
@@ -235,6 +240,11 @@ a {
 
 .header-user-info .header-user-name {
   background-color: #ffffff;
+
+  width: 299px;
+  padding: 12px 0px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .header-user-name:hover,
@@ -253,6 +263,11 @@ a {
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
+}
+
+.orders-link {
+  margin-left: 17px;
+  margin-right: 32px;
 }
 
 .orders-link:hover,
@@ -305,7 +320,6 @@ a {
   font-size: 17px;
   line-height: 17px;
 }
-
 
 .company-info {
   display: flex;
@@ -449,7 +463,6 @@ a {
   font-size: 18px;
   line-height: 24px;
 }
-
 
 .main-footer p {
   padding: 0px;
@@ -623,12 +636,33 @@ a {
   color: #ee3643;
 }
 
+.breadcrumbs {
+  margin: 0;
+  padding: 20px 0px;
+  list-style: none;
+  display: flex;
+}
 
-.breadcrumbs a {
+.breadcrumbs li {
+  text-transform: uppercase;
+  padding: 0px 20px;
+}
+
+.breadcrumbs li:first-child {
+  padding-left: 54px;
+}
+
+
+.breadcrumbs a,
+.breadcrumbs-current {
+  display: block;
   font-family: 'PT Sans', sans-serif;
   color: #000000;
   font-size: 13px;
   line-height: 18px;
+
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-title {
@@ -636,10 +670,25 @@ a {
 }
 
 .catalog-title h2 {
+  margin: 0;
+  padding: 30px;
   color: #32425c;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.catalog-wrapper {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  margin-right: 21px;
+  width: 220px;
+  min-width: 220px;
 }
 
 .filter h3 {
@@ -673,15 +722,48 @@ a {
 }
 
 .catalog-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
 }
 
 .catalog-item {
   background-color: #ffffff;
   border: solid 1px #e5e5e5;
+
+  width: 218px;
+  margin-bottom: 21px;
+  margin-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.catalog-item-img {
+  margin-bottom: 12px;
+}
+
+.catalog-item-title {
+  padding: 0;
+  margin: 0 auto 18px;
+
+  width: 155px;
+  text-align: center;
 }
 
 .catalog-item-title a {
+  display: block;
+  padding: 0;
+  margin: 0;
   color: #000000;
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
@@ -689,6 +771,12 @@ a {
 }
 
 .catalog-item-old-price {
+  padding: 0;
+  margin: 0 0 13px;
+
+  text-align: center;
+
+  min-height: 18px;
   color: #999999;
   font-family: 'PT Sans', sans-serif;
   font-size: 17px;
@@ -700,7 +788,13 @@ a {
   background-color: #ee3643;
 }
 
-.catalog-item-price p {
+.catalog-item-price {
+  width: 141px;
+  padding: 10px 0px;
+  margin: 0 auto;
+
+  text-align: center;
+  background-color: #ee3643;
   color: #ffffff;
   font-family: 'PT Sans', sans-serif;
   font-size: 17px;
@@ -710,10 +804,17 @@ a {
 .catalog-item-actions {
   font-size: 14px;
   line-height: 18px;
+  padding-top: 44px;
 }
 
 .btn-action-buy {
+  width: 135px;
+  padding: 10px 0px;
+  margin-bottom: 8px;
   background-color: #63a63e;
+
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .btn-action-buy:hover {
@@ -728,6 +829,10 @@ a {
 .btn.btn-action-bookmark {
   color: #32425c;
 
+  width: 135px;
+  padding: 10px 0px;
+  margin-right: auto;
+  margin-left: auto;
   border: solid 3px #63a63e;
   background-color: transparent;
 }
