@@ -1,5 +1,5 @@
 body {
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   line-height: 24px;
   font-weight: normal;
   color: #ffffff;
@@ -7,6 +7,8 @@ body {
   background-color: #ffffff;
   background-position: top center;
   background-repeat: no-repeat;
+
+  min-width: 960px;
 }
 
 a {
@@ -46,7 +48,7 @@ input[type="radio"].visually-hidden {
   display: block;
 
   font: inherit;
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
 
@@ -497,7 +499,7 @@ input[type="radio"].visually-hidden {
 }
 
 .company-info-text {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   color: #000000;
   font-size: 13px;
   line-height: 24px;
@@ -878,7 +880,7 @@ input[type="radio"].visually-hidden {
 .breadcrumbs a,
 .breadcrumbs-current {
   display: block;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   color: #000000;
   font-size: 13px;
   line-height: 18px;
@@ -915,7 +917,7 @@ input[type="radio"].visually-hidden {
 
 .filter h3 {
   color: #000000;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
@@ -926,7 +928,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
 
   color: #000000;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   list-style: none;
   font-size: 15px;
   line-height: 20px
@@ -1017,7 +1019,7 @@ input[type="radio"].visually-hidden {
 .filter-input:disabled+label {
   color: #000000;
 
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .filter label {
@@ -1029,7 +1031,7 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
 
   color: #000000;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 
@@ -1086,7 +1088,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
   color: #000000;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
   line-height: 20px
 }
@@ -1099,7 +1101,7 @@ input[type="radio"].visually-hidden {
 
   min-height: 18px;
   color: #999999;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   text-decoration: line-through;
@@ -1117,7 +1119,7 @@ input[type="radio"].visually-hidden {
   text-align: center;
   background-color: #ee3643;
   color: #ffffff;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
 }
@@ -1166,6 +1168,154 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
   border: solid 3px #32425c;
 }
+
+.service {
+  margin-top: 86px;
+  background-color: #f2f6f8
+}
+
+.about-service {
+  width: 400px
+}
+
+.service h2 {
+  font-size: 30px;
+  line-height: 24px;
+  margin: 28px 0;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: normal
+}
+
+
+.service h2 {
+  padding-top: 68px;
+  margin-bottom: 30px
+}
+
+.service h3 {
+  font-size: 36px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0 0 34px 0;
+  color: #32425c
+}
+
+.service p {
+  font: 13px/24px "PT Sans", "Arial", sans-serif;
+  color: #000
+}
+
+.transfer {
+  width: 400px;
+  padding-top: 12px
+}
+
+.service-information {
+  position: relative;
+  margin: 70px 0 54px 0;
+  padding-bottom: 102px
+}
+
+.service-information:after {
+  position: absolute;
+  content: "";
+  height: 270px;
+  width: 20px;
+  left: 230px;
+  top: -45px;
+  background: url("../img/shadow.png") no-repeat
+}
+
+.service-navigation input[type="radio"],
+.sliders input[type="radio"] {
+  display: none
+}
+
+.service-information label {
+  display: flex;
+  width: 217px;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  padding: 11px 0 17px 23px;
+  border-bottom: 1px solid #293449;
+  border-top: 1px solid #405069;
+  background-color: #32425c;
+  color: #fff;
+  cursor: pointer;
+  text-transform: capitalize
+}
+
+.service-information label:hover {
+  background-color: #293449
+}
+
+#button-1:checked ~ label[for=button-1],
+#button-2:checked ~ label[for=button-2],
+#button-3:checked ~ label[for=button-3] {
+  color: #32425c;
+  background: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff
+}
+
+#button-1:checked ~ .slider .service-content:nth-child(1),
+#button-2:checked ~ .slider .service-content:nth-child(2),
+#button-3:checked ~ .slider .service-content:nth-child(3) {
+  display: block
+}
+
+.service-content:nth-child(1) {
+  background: url("../img/delivery.png") no-repeat 100% 47%
+}
+
+.service-content:nth-child(2) {
+  background: url("../img/warranty.png") no-repeat 100% 0%
+}
+
+.service-content:nth-child(3) {
+  background: url("../img/credit.png") no-repeat 100% 0%
+}
+
+.service-content {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  width: 620px;
+  padding-bottom: 139px
+}
+
+.service-content h2 {
+  font-size: 36px;
+  line-height: 24px;
+  color: #32425c;
+  font-weight: normal;
+  margin-top: 4px
+}
+
+.service-content .btn,
+.slide .btn {
+  width: 195px;
+  height: 38px;
+  margin-top: 26px;
+  margin-right: 25px;
+}
+
+.delivery-slide {
+  width: 275px
+}
+
+.guarantee {
+  width: 375px
+}
+
+.credit {
+  width: 280px
+}
+
 
 .modal {
   box-sizing: border-box;
@@ -1264,7 +1414,7 @@ input[type="radio"].visually-hidden {
   padding-right: 40px;
 
   font: inherit;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   color: #a9a9a9;
   font-size: 13px;
   line-height: 18px;
@@ -1294,7 +1444,7 @@ input[type="radio"].visually-hidden {
   padding-right: 40px;
 
   font: inherit;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   color: #a9a9a9;
   font-size: 13px;
   line-height: 18px;
