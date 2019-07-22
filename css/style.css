@@ -17,7 +17,6 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -481,6 +480,153 @@ input[type="radio"].visually-hidden {
   background-color: #1d2739;
 }
 
+.promo {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 59px 0 31px 0
+}
+
+.promo h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: capitalize;
+  margin: 21px 0 12px 23px
+}
+
+.promo p {
+  font-size: 24px;
+  margin: 25px 0px 10px 25px;
+  color: #fff
+}
+
+.fix {
+  display: flex;
+  justify-content: space-between
+}
+
+.fix p {
+  margin: 0
+}
+
+.box {
+  width: 300px;
+  height: 123px;
+  margin-bottom: 20px
+}
+
+.fix-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 3%;
+  text-transform: uppercase;
+  background-color: #ee3643
+}
+
+.box .btn {
+  width: 135px;
+  height: 38px;
+  padding: 0;
+  margin: 0 0 25px 22px;
+  background-color: rgba(229, 229, 229, 0.1)
+}
+
+.box .btn:hover {
+  background-color: rgba(204, 204, 204, 0.2)
+}
+
+.box .btn:active {
+  background-color: rgba(178, 178, 178, 0.3)
+}
+
+.material {
+  position: relative;
+  margin-right: 20px;
+  background: #f6b22d url("../img/bucket.png") no-repeat 83% 53%
+}
+
+.tool {
+  margin-right: 20px;
+  background: #4aafde url("../img/drill.png") no-repeat 87% 53%
+}
+
+.equipment {
+  background: #cc79d1 url("../img/tractor.png") no-repeat 86% 53%
+}
+
+.sliders {
+  position: relative
+}
+
+.slide-control {
+  position: absolute;
+  bottom: 55px;
+  left: 48%;
+  display: flex;
+  justify-content: space-between;
+  width: 30px;
+  height: 10px
+}
+
+.slide-control label {
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer
+}
+
+#btn-1:checked ~ .slide-control label[for="btn-1"],
+#btn-2:checked ~ .slide-control label[for="btn-2"] {
+  background: #ee3643
+}
+
+.slide {
+  display: none;
+  width: 620px;
+  height: 265px
+}
+
+.slide h2 {
+  font-size: 36px;
+  line-height: 30px;
+  margin: 0;
+  padding: 26px 0 0 24px;
+  color: #fff;
+  text-transform: uppercase
+}
+
+.slide p {
+  margin-top: 4px;
+  margin-left: 25px;
+  font: 18px/24px "PT Sans", "Arial", sans-serif
+}
+
+#btn-1:checked ~ .switching .slide:nth-child(1) {
+  display: block;
+  background: url("../img/slide-1.jpg")
+}
+
+.sale {
+  margin-left: 20px;
+  background: #85d179 url("../img/sale.png") no-repeat 81% 53%
+}
+
+.delivery {
+  margin-left: 20px;
+  background: #f6b22d url("../img/auto.png") no-repeat 86% 53%
+}
+
 .company-info {
   display: flex;
   justify-content: space-between;
@@ -533,7 +679,7 @@ input[type="radio"].visually-hidden {
 }
 
 .company-info .contacts-map {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .partners-list {
@@ -948,15 +1094,15 @@ input[type="radio"].visually-hidden {
   user-select: none;
 }
 
-.filter-input+label {
+.filter-input + label {
   opacity: 0.7;
 }
 
-.filter-input:hover+label {
+.filter-input:hover + label {
   opacity: 1;
 }
 
-.filter-input-checkbox:checked+label::before {
+.filter-input-checkbox:checked + label::before {
   content: "";
 
   position: absolute;
@@ -971,7 +1117,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.filter-input-checkbox+label::before {
+.filter-input-checkbox + label::before {
   content: "";
 
   position: absolute;
@@ -986,7 +1132,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.filter-input-radio:checked+label::before {
+.filter-input-radio:checked + label::before {
   content: "";
 
   position: absolute;
@@ -1001,7 +1147,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.filter-input-radio+label::before {
+.filter-input-radio + label::before {
   content: "";
 
   position: absolute;
@@ -1016,7 +1162,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.filter-input:disabled+label {
+.filter-input:disabled + label {
   color: #000000;
 
   opacity: 0.3;
@@ -1186,7 +1332,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase
 }
 
-.popular-blog .btn{
+.popular-blog .btn {
   width: 253px;
   height: 38px;
   margin-right: 25px
@@ -1330,6 +1476,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
   box-shadow: 0 5px 15px #abafb8
 }
+
 .service {
   margin-top: 86px;
   background-color: #f2f6f8
@@ -1347,7 +1494,6 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   font-weight: normal
 }
-
 
 .service h2 {
   padding-top: 68px;
@@ -1463,6 +1609,10 @@ input[type="radio"].visually-hidden {
   height: 38px;
   margin-top: 26px;
   margin-right: 25px;
+}
+
+.slide .btn {
+  margin: 122px 0 0 25px
 }
 
 .delivery-slide {
