@@ -588,7 +588,7 @@ input[type="radio"].visually-hidden {
 
 #btn-1:checked ~ .slide-control label[for="btn-1"],
 #btn-2:checked ~ .slide-control label[for="btn-2"] {
-  background: #ee3643
+  background: #ee3643;
 }
 
 .slide {
@@ -1052,9 +1052,9 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 
-  font: 13px/24px "Cuprum","Arial",sans-serif;
+  font: 13px/24px "Cuprum", "Arial", sans-serif;
 }
 
 aside {
@@ -1224,7 +1224,6 @@ form h3 {
   color: #000
 }
 
-
 .arrow-up,
 .arrow-down {
   width: 0;
@@ -1364,12 +1363,11 @@ form h3 {
 
   color: #000;
   text-transform: uppercase;
-  font: 15px/20px "PT Sans","Arial",sans-serif;
+  font: 15px/20px "PT Sans", "Arial", sans-serif;
 }
 
 .filter-1 ul,
-.filter-2 ul
-{
+.filter-2 ul {
   padding: 0;
   margin: 0;
 
@@ -1690,7 +1688,6 @@ form h3 {
   font-weight: normal
 }
 
-
 .product-description h2 {
   padding-top: 69px
 }
@@ -1699,7 +1696,6 @@ form h3 {
   width: 400px;
   padding-top: 12px
 }
-
 
 .checkbox {
   display: flex;
@@ -1839,7 +1835,6 @@ form .btn-filter {
   width: 220px;
   height: 37px
 }
-
 
 .service-information {
   position: relative;
