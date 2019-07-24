@@ -1,5 +1,7 @@
-# Личный проект «Техномарт»
+# Personal project "Technomart"
 
-Сверстаные страницы:
-- главная страница index.html
-- страница каталога catalog.html
+Ready pages:
+- home page index.html
+- catalog page catalog.html
+
+https://technomart-shop.firebaseapp.com
