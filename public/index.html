@@ -1,65 +1,355 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="ru">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/6.3.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/6.3.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/6.3.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/6.3.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/6.3.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+</head>
+
+<body>
+<header class="main-header">
+  <div class="main-header-top">
+    <div class="container">
+      <a class="main-header-logo">
+        <img src="img/logo-technomart.svg" width="109" height="19" alt='Логотип интернет-магазина "Техномарт"'>
+      </a>
+      <p class="search-link">Поиск</p>
+      <a href="#" class="bookmark-link">Закладки</a>
+      <a href="#" class="basket-link">Корзина</a>
+      <a href="#" class="checkout-link active">Оформить заказ</a>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </div>
+  <div class="main-header-bottom">
+    <div class="container">
+      <div class="main-header-bottom-wrapper">
+        <h1 class="main-header-title">Интернет магазин строительных материалов и инструментов для ремонта</h1>
+        <div class="header-contacts">
+          <a class="header-contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+        </div>
+        <ul class="user-navigation">
+          <li class="login-link"><a href="#">Войти</a></li>
+          <li class="registration-link"><a href="#">Регистрация</a></li>
+        </ul>
+      </div>
+      <nav class="main-navigation">
+        <ul class="main-navigation-list">
+          <li class="main-navigation-item"><a class="main-navigation-link" href="index.html">Главная</a></li>
+          <li><a href="#">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <section class="popular-product-groups">
+      <div class="promo fix">
+        <div class="box material">
+          <h3>материалы</h3>
+          <a href="#" class="btn">на любой вкус</a>
+        </div>
+        <div class="box tool">
+          <h3>инструмент</h3>
+          <a href="#" class="btn">на все случаи</a>
+        </div>
+        <div class="box equipment">
+          <h3>техника</h3>
+          <a href="#" class="btn">для стройки</a>
+        </div>
+        <div class="sliders">
+          <input type="radio" id="btn-1" name="slider" checked>
+          <input type="radio" id="btn-2" name="slider">
+          <div class="slide-control">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+          </div>
+          <div class="switching">
+            <section class="slide">
+              <h2>перфораторы</h2>
+              <p>Настоящие мужские игрушки</p>
+              <a href="#" class="btn">Открыть каталог</a>
+            </section>
+            <section class="slide">
+              <h2>дрели</h2>
+              <p>Соседям на радость!</p>
+              <a href="#" class="btn">Открыть каталог</a>
+            </section>
+          </div>
+        </div>
+        <div class="fix-2">
+          <div class="box sale">
+            <h3>скидки 50%</h3>
+            <a href="#" class="btn">на 350 товаров</a>
+          </div>
+          <div class="box delivery">
+            <h3>доставка</h3>
+            <a href="#" class="btn">бесплатно</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="popular-products">
+      <div class="popular-blog">
+        <h2>популярные товары:</h2>
+        <a href="#" class="btn">все популярные товары</a>
+      </div>
+      <div class="products">
+        <div class="product">
+          <img src="img/picture-1.jpg" alt="Перфоратор BOSH BFG 9000" width="218" height="170">
+          <h3>Перфоратор BOSCH BFG 9000</h3>
+          <del class="price-old">32500 Р.</del>
+          <span class="price">25500 Р.</span>
+          <div class="small-popup">
+            <a class="btn buy" href="#">купить</a>
+            <a class="btn bookmarks" href="#">в закладки</a>
+          </div>
+        </div>
+        <div class="product">
+          <img src="img/picture-2.jpg" alt="Перфоратор BOSH BFG 3000" width="218" height="170">
+          <h3>Перфоратор BOSCH BFG 3000</h3>
+          <del class="price-old">22500 Р.</del>
+          <span class="price">15500 Р.</span>
+          <div class="small-popup">
+            <a class="btn buy" href="#">купить</a>
+            <a class="btn bookmarks" href="#">в закладки</a>
+          </div>
+        </div>
+        <div class="product">
+          <img src="img/picture-3.jpg" alt="Перфоратор BOSH BFG 6000" width="218" height="170">
+          <h3>Перфоратор BOSCH BFG 6000</h3>
+          <del class="price-old">30500 Р.</del>
+          <span class="price">25500 Р.</span>
+          <div class="small-popup">
+            <a class="btn buy" href="#">купить</a>
+            <a class="btn bookmarks" href="#">в закладки</a>
+          </div>
+        </div>
+        <div class="product new">
+          <img src="img/picture-4.jpg" alt="Перфоратор BOSH BFG 2000" width="218" height="170">
+          <h3>Перфоратор BOSCH BFG 2000</h3>
+          <span class="price no-discounts">12500 Р.</span>
+          <div class="small-popup">
+            <a class="btn buy" href="#">купить</a>
+            <a class="btn bookmarks" href="#">в закладки</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="popular-manufacturer">
+      <div class="popular-blog">
+        <h2>популярные производители:</h2>
+        <a href="#" class="btn">все производители</a>
+      </div>
+      <div class="list-manufacturer">
+        <a class="brand" href="#">
+          <img src="img/bosch.jpg" alt="bosch" width="218" height="143">
+        </a>
+        <a class="brand" href="#">
+          <img src="img/makita.jpg" alt="makita" width="218" height="143">
+        </a>
+        <a class="brand" href="#">
+          <img src="img/dewalt.jpg" alt="dewalt" width="218" height="143">
+        </a>
+        <a class="brand" href="#">
+          <img src="img/interskol.jpg" alt="interskol" width="216" height="143">
+        </a>
+        <a class="brand" href="#">
+          <img src="img/hitachi.jpg" alt="hitachi" width="218" height="143">
+        </a>
+        <a class="brand" href="#">
+          <img src="img/lg.jpg" alt="lg" width="218" height="143">
+        </a>
+        <a class="brand" href="#">
+          <img src="img/aeg.jpg" alt="aeg" width="218" height="143">
+        </a>
+        <a class="brand" href="#">
+          <img src="img/metabo.jpg" alt="metabo" width="218" height="143">
+        </a>
+      </div>
+    </section>
+  </div>
+  <section class="service">
+    <div class="container">
+      <h2>сервисы</h2>
+      <p class="about-service">Хороший интернет-магазин отличается от плохого не только ценами!
+        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными</p>
+      <div class="service-information">
+        <div class="service-navigation">
+          <input type="radio" id="button-1" name="navigation" checked>
+          <input type="radio" id="button-2" name="navigation">
+          <input type="radio" id="button-3" name="navigation">
+          <label for="button-1">доставка</label>
+          <label for="button-2">гарантия</label>
+          <label for="button-3">кредит</label>
+          <div class="slider">
+            <section class="service-content">
+              <h3>доставка</h3>
+              <p class="delivery-slide">Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,</br>
+                поднимая его на ваш этаж!</p>
+            </section>
+            <section class="service-content">
+              <h3>гарантия</h3>
+              <p class="guarantee">Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгаранием,<br>
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                сгоревший товар на новый.</br>
+                Дом уж восстановите как-нибудь сами.</p>
+            </section>
+            <section class="service-content">
+              <h3>кредит</h3>
+              <p class="credit">Залезть в долговую яму стало проще!
+                Кредитные консультанты придут вам на помощь.</p>
+              <a class="btn" href="#">отправить заявку</a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="company-info container">
+    <div class="company-info-description">
+      <h2>Компания "Техномарт"</h2>
+      <p class="company-info-text left-column">
+        Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и
+        строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
+      </p>
+      <p class="company-info-text company-info-text-delivery">
+        Мы можем доставить ваш товар в самые отдаленные точки России!
+        Техномарт работает со многими транспортными компаниями:
+      </p>
+      <ul class="partners-list">
+        <li>Деловые линии</li>
+        <li>Автотрэйдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a class="btn" href="#">Подробнее о компании</a>
+    </div>
+    <div class="company-info-contacts">
+      <h2>Контакты</h2>
+      <p class="company-info-text right-column">
+        Вы можете забрать товар сами,
+        заехав в наш офис:
+      </p>
+      <p class="contacts-map">
+        <button class="button-close visually-hidden" type="button"><span>Закрыть</span></button>
+        <img src="img/map.jpg" width="300" height="158" alt="Офис магазина по адресу Большая Конюшенная ул., 19">
+      </p>
+      <a class="btn" href="#">Заблудились? Напишите нам</a>
+    </div>
+  </section>
+</main>
+<footer class="main-footer">
+  <div class="main-footer-top">
+    <div class="container">
+      <div class="main-footer-top-wrapper">
+        <a class="main-footer-logo">
+          <img src="img/logo-technomart.svg" width="138" height="23" alt='Логотип интернет-магазина "Техномарт"'>
+        </a>
+        <ul class="footer-navigation">
+          <li><a href="#">Компания</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      <div class="footer-contacts-wrapper">
+        <div class="footer-contacts">
+          <p class="footer-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+          <a class="footer-contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        </div>
+        <ul class="catalog-groups">
+          <li><a href="#">Материалы</a></li>
+          <li><a href="#">Техника</a></li>
+          <li><a href="#">Инструмент</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="main-footer-bottom">
+    <div class="container">
+      <p class="footer-license">
+        2010-2017 Компания "Техномарт"
+        Все права защищены
+      </p>
+      <div class="footer-social">
+        <ul class="footer-social-list">
+          <li><a class="social-button" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="15" viewBox="0 0 26 15">
+              <path fill="#FFF"
+                    d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534 1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244 1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621 1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664 0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16 1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54 3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203 10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419z"/>
+            </svg>
+          </a></li>
+          <li><a class="social-button" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
+              <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
+            </svg>
+          </a></li>
+          <li><a class="social-button" href="#">
+            <span class="visually-hidden">Инстаграм</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+              <path fill="#FFF"
+                    d="M18 0H3C1.35 0 0 1.35 0 3v15c0 1.65 1.35 3 3 3h15c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57 3.5 3.5S12.43 14 10.5 14 7 12.43 7 10.5 8.57 7 10.5 7zM18 18H3V9h1.181A6.504 6.504 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.45 6.45 0 0 0-.181-1.5H18v9zm0-11h-4V3h4v4z"/>
+            </svg>
+          </a></li>
+        </ul>
+      </div>
+      <p class="footer-feedback">
+        <span>Обратная связь:</span>
+        <a class="button" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </p>
+      <p class="footer-copyright">
+        <span>Разработано:</span>
+        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<div class="modal modal-write-us" style="display: none">
+  <form class="modal-write-us-form" action="#" method="post">
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <div class="modal-write-us-content">
+      <p class="modal-write-us-contacts">
+        <label>Ваше имя
+          <input type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        <label>Ваше e-mail
+          <input type="text" name="email" placeholder="email@example.com">
+        </label>
+      </p>
+      <p class="modal-write-us-text">
+        <label>Текст письма:
+          <textarea name="text" placeholder="В свободной форме"></textarea>
+        </label>
+      </p>
+    </div>
+    <div class="modal-write-us-footer">
+      <button class="btn button" type="submit">Отправить</button>
+    </div>
+  </form>
+</div>
+<div class="modal modal-map" style="display: none">
+  <h2 class="visually-hidden">Как до нас добраться</h2>
+  <p><img src="img/map.jpg" width="940" height="446" alt="Офис магазина по адресу Большая Конюшенная ул., 19"></p>
+  <button class="modal-close" type="button">Закрыть</button>
+</div>
+</body>
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
 </html>
